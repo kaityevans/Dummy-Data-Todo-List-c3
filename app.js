@@ -27,3 +27,21 @@ const logTodos = () => {
 const populateTodos = () => {
 
 }
+
+const arrayOfTodos1 = [
+  {
+  "userId": 14,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+},
+{
+  "userId": 20,
+  "id": 2,
+  "title": "delectus aut autem",
+  "completed": false
+}
+]
+
+console.log(arrayOfTodos[0].userId) // => 14
+console.log(arrayOfTodos[1].userId) // => 20
