@@ -12,7 +12,12 @@
   "id": 2,
   "title": "delectus aut autem",
   "completed": false
-}]
+}
+]
+console.log(arrayOfTodos[0].userId) // => 14
+console.log(arrayOfTodos[1].userId) // => 20
+console.log(arrayOfTodos[0].title) 
+console.log(arrayOfTodos[1].title) 
 
 const fetchTodos = () => {
   fetch('https://jsonplaceholder.typicode.com/todos')
@@ -24,10 +29,29 @@ const logTodos = () => {
   console.log(arrayOfTodos)
 }
 
-const populateTodos = () => {
 
+const populateTodos = () => {
+for (let i=0; i<arrayOfTodos.length; i++) {
+  let title=document.getElementById("todo-list")
+  var li=document.createElement('li');
+  var text = document.createTextNode(arrayOfTodos[i].title)
+  li.appendChild(text)
+  title.appendChild(li)
+}
 }
 
+const ByUserId = () => {
+  for (let i=0; i<arrayOfTodos.length; i++) {
+    let title=document.getElementById("todo-list")
+    var li=document.createElement('li');
+    var text = document.createTextNode(arrayOfTodos[i].title)
+    li.appendChild(text)
+    title.appendChild(li)
+  }
+  }
+
+  // Use a JS Method to find all Li's
+  
 const arrayOfTodos1 = [
   {
   "userId": 14,
