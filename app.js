@@ -41,15 +41,20 @@ for (let i=0; i<arrayOfTodos.length; i++) {
 }
 
 const ByUserId = () => {
-  for (let i=0; i<arrayOfTodos.length; i++) {
-    let title=document.getElementById("todo-list")
+  for (let i=0; i<arrayOfTodos.length; i++<9) {
+    let userId=document.getElementById("todo-list")
     var li=document.createElement('li');
-    var text = document.createTextNode(arrayOfTodos[i].title)
+    var text = document.createTextNode(arrayOfTodos[i].userId)
     li.appendChild(text)
-    title.appendChild(li)
+    userId.appendChild(li)
   }
   }
-
+const clear_inputs =() => { 
+  input=document.getElementByID('todo-list')
+  for(input of inputs){
+    input.id=' ' ///this emptys the inputs
+  }
+}
   // Use a JS Method to find all Li's
   
 const arrayOfTodos1 = [
